@@ -1,0 +1,466 @@
+/* Global Styles */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #7c553b;
+    color: #333;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #7c553b;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #7c553b;
+}
+
+/* Section Accueil */
+#home {
+    margin-top: 70px;
+    padding: 4rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.welcome-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+}
+
+/* Section À propos */
+#about {
+    padding: 4rem 1rem;
+    background: white;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Section Projets */
+#projects {
+    padding: 4rem 1rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+#projects .project {
+    margin: 2rem auto;
+    max-width: 600px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#projects .project img {
+    width: 100%;
+    height: auto;
+}
+
+#projects .project h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+#projects .project p {
+    padding: 0 1rem 1.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Section Contact */
+#contact {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: white;
+}
+
+.btn-download {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: #6a11cb;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download:hover {
+    background: #f9d423;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+</style>
+        <style type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+.image-scroller {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+}
+
+.instagram-scroller {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-container {
+  display: flex;
+  gap: 10px;
+}
+
+.scroll-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.scroll-container img {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.scroll-container img:hover {
+  transform: scale(1.1);
+}
+.titre
+{color: #00007F}
